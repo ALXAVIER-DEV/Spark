@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <locale.h>
+
+
+#define lin 200
+#define col 50
+
+char Nome [lin][col];
+char email [lin][col];
+int cpf [11];
+int opcao;
+void cadastro ();
+
+int main (){
+
+    printf(" **************************************\n");
+    printf("*    Bem vindo a Pizzaria em C        \n*");
+    printf(" **************************************\n");
+
+
+   system("color 1e");
+    cadastro ();
+
+}
+
+void cadastro(){
+    static int linha;
+    do{
+    
+        printf("\nFaça seu cadastro: ");
+        printf("\nDigite seu Nome: ");
+        scanf("%s" , &Nome[linha]);
+        printf("\nDigite seu e-mail: ");
+        scanf("%s" , &email[linha]);
+        printf("\nDigite seu CPF: ");
+        scanf("%s" , &cpf[linha]);
+        printf("\n Digite 1 para continuar ou 0 para sair: \n");
+        scanf("%d ,&opcao");
+        linha++;
+        }while(opcao==1);
+}
